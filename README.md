@@ -95,37 +95,64 @@ A **modelagem física de banco de dados** é a etapa onde o modelo lógico é tr
   - `CHECK`: Define uma condição que os valores da coluna devem seguir.  
   - `DEFAULT`: Define um valor padrão para a coluna caso não seja informado.  
 
-### 🏗️ Criando um Banco de Dados e Tabelas no MySQL  
+<div align="left">
+  <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
+</div>
 
-```sql
-CREATE DATABASE loja;
-USE loja;
+<br>
 
-CREATE TABLE clientes (
-    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
-    data_nascimento DATE
-);
+<!-- AUTHOR -->
 
-CREATE TABLE pedidos (
-    id_pedido INT PRIMARY KEY AUTO_INCREMENT,
-    id_cliente INT,
-    data_pedido DATE NOT NULL,
-    total DECIMAL(10,2),
-    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
-);
-```
+## 👤 Autor
 
-Nesse exemplo:  
-✔ Criamos um banco chamado **loja**.  
-✔ Criamos a tabela **clientes** com ID único e e-mail obrigatório.  
-✔ Criamos a tabela **pedidos**, relacionando-a com **clientes** por meio de uma chave estrangeira.
+<table>
+  <tr>
+    <td valign="top" width="33%">
+      <div align="center">  
+        <a href="https://github.com/juletopi">
+          <img src="https://user-images.githubusercontent.com/76459155/220271784-9f930c36-c370-4518-9b56-604627c6e2b5.png" width="120px;" alt="JuletopiAvatar-pic" title="Autor: Juletopi" />
+          <br>
+          <sub><b>Júlio Cézar | Juletopi</b></sub>
+        </a>
+      </div>
+    </td>
+    <td valign="left" width="100%">
+      <div align="left">
+        <ul>
+          <li>
+            <sub><img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" height="15" alt="LinkedIn-icon"> LinkedIn - <a href="https://www.linkedin.com/in/julio-cezar-pereira-camargo/">Júlio Cézar P. Camargo</a></sub>
+          </li>
+          <li>
+            <sub><img align="center" src="https://pngimg.com/uploads/email/email_PNG100738.png" height="15" alt="Facebook-icon"> Email - <a href="mailto:juliocezarpvh@hotmail.com">juliocezarpvh@hotmail.com</a></sub>
+          </li>
+          <li>
+            <sub><img align="center" src="https://cdn3.emoji.gg/emojis/6158-whatsapp.png" height="15" alt="WhatsApp-icon"> Whatsapp - <a href="http://api.whatsapp.com/send?phone=5569993606894">+55 (69) 9 9360-6894</a></sub>
+          </li>
+          <li>
+            <sub><img align="center" src="https://cdn3.emoji.gg/emojis/6333-instagram.png" height="15" alt="Instagram-icon"> Instagram - <a href="https://www.instagram.com/juletopi/">@juletopi</a></sub>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
 
 <div align="left">
   <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
 </div>
 
+<br>
+
+<!-- THANK YOU, GOODBYE -->
+
+----
+
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=4f5d99&height=4&section=header&%20render">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Sue+Ellen+Francisco&size=40&duration=1&pause=99999&color=8354d2&center=true&vCenter=true&repeat=false&width=620&height=60&lines=Obrigado+por+visitar%2C+e+até+a+próxima!" alt="TypingGoodbye-SVG" title="Boas venturas e volte sempre que precisar! ;)"/>
+  </a>
+</div>
+
+<div align="center">
+  Feito com 💜 por <a href="https://github.com/juletopi"> Juletopi</a>.
 </div>
