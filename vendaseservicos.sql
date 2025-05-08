@@ -18,7 +18,7 @@ CREATE TABLE Funcionario (
 	id_funcionario INT PRIMARY KEY AUTO_INCREMENT,
     cnh VARCHAR(9),
     nome_func VARCHAR(100) NOT NULL,
-    cpf_cnpj VARCHAR(11) NOT NULL UNIQUE,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
     data_nasc DATE,
     sexo CHAR(1)
 );
@@ -120,21 +120,20 @@ CREATE TABLE Venda_Servico (
 );
 
 -- Faça o insert de 10 clientes, 10 serviços, 5 funcionários e 10 caixas (29/04)
--- Inserts
 
 INSERT INTO Cliente (nome_cliente, cpf_cnpj, razao_social, data_nasc, sexo) VALUES
-	("Carlos Andrade", "12345678900", "Carlos Andrade ME", "1985-06-15", "M"),
+	("Carlos Andrade", "12345678000199", "Carlos Andrade ME", "1985-06-15", "M"),
 	("Fernanda Lima", "23456789001", "Fernanda Lima LTDA", "1990-04-22", "F"),
-	("João Pereira", "34567890123", "João Pereira EPP", "1978-09-30", "M"),
+	("João Pereira", "34567891000112", "João Pereira EPP", "1978-09-30", "M"),
 	("Mariana Silva", "45678901234", "Mariana Silva MEI", "1989-11-10", "F"),
-	("Ana Souza", "56789012345", "Ana Souza ME", "2000-03-05", "F"),
+	("Ana Souza", "56789012000145", "Ana Souza ME", "2000-03-05", "F"),
 	("Ricardo Melo", "67890123456", "Ricardo Melo LTDA", "1982-01-18", "M"),
-	("Juliana Rocha", "78901234567", "Juliana Rocha EIRELI", "1995-07-25", "F"),
+	("Juliana Rocha", "78901234000123", "Juliana Rocha EIRELI", "1995-07-25", "F"),
 	("Felipe Gomes", "89012345678", "Felipe Gomes LTDA", "1987-12-12", "M"),
-	("Roberta Dias", "90123456789", "Roberta Dias ME", "1992-08-08", "F"),
+	("Roberta Dias", "90123456000188", "Roberta Dias ME", "1992-08-08", "F"),
 	("Bruno Fernandes", "01234567890", "Bruno Fernandes LTDA", "1980-05-20", "M");
     
-INSERT INTO Funcionario (cnh, nome_func, cpf_cnpj, data_nasc, sexo) VALUES
+INSERT INTO Funcionario (cnh, nome_func, cpf, data_nasc, sexo) VALUES
 	("123456789", "Pedro Oliveira", "11122233344", "1990-02-20", "M"),
 	("234567890", "Lucas Almeida", "22233344455", "1988-05-12", "M"),
 	("345678901", "Camila Torres", "33344455566", "1995-09-08", "F"),
@@ -165,11 +164,55 @@ INSERT INTO Caixa (datahora_abertura, datahora_fechamento, saldo_incial, saldo_f
 	("2025-04-21 08:00:00", "2025-04-21 18:00:00", 870.00, 1550.00, 8, 3, 4),
 	("2025-04-20 08:00:00", "2025-04-20 18:00:00", 940.00, 1720.00, 11, 1, 5);
 
-SELECT * FROM Cliente;
-SELECT * FROM Funcionario;
-SELECT * FROM Servico;
-SELECT * FROM Caixa;
+INSERT INTO Vendas (valor_total, valor_final, desconto, data_venda, id_cliente_fk) VALUES
+	(1233.17, 1226.49, 6.68, '2024-04-30', 10),
+	(1531.19, 1371.17, 160.02, '2024-04-17', 9),
+	(1682.69, 1472.58, 210.11, '2024-04-03', 5),
+	(1798.63, 1652.37, 146.26, '2024-04-03', 4),
+	(1108.90, 899.26, 209.64, '2024-05-01', 7),
+	(1948.84, 1725.23, 223.61, '2024-04-27', 4),
+	(784.52, 727.78, 56.74, '2024-04-24', 3),
+	(1996.88, 1749.31, 247.57, '2024-04-05', 1),
+	(1540.77, 1317.29, 223.48, '2024-04-20', 5),
+	(637.72, 587.00, 50.72, '2024-04-01', 8);
+
+INSERT INTO TipoPag (descricao) VALUES
+	('Dinheiro'),
+	('Cartão de Crédito'),
+	('Cartão de Débito'),
+	('Pix'),
+	('Boleto'),
+	('Transferência Bancária');
+
+INSERT INTO Recebimento (valor_parcela, status_receb, data_receb, id_caixa_fk, id_vendas_fk, id_tipopag_fk) VALUES
+	(150.00, 'Pago', '2025-04-01', 1, 1, 2),
+	(150.00, 'Pago', '2025-05-01', 1, 1, 2),
+	(150.00, 'Pendente', '2025-06-01', 1, 1, 2),
+	(200.00, 'Pago', '2025-04-10', 2, 3, 4),
+	(200.00, 'Pendente', '2025-05-10', 2, 3, 4),
+	(100.00, 'Pago', '2025-03-15', 3, 5, 3),
+	(100.00, 'Pago', '2025-04-15', 3, 5, 3),
+	(100.00, 'Atrasado', '2025-05-15', 3, 5, 3),
+	(100.00, 'Pendente', '2025-06-15', 3, 5, 3),
+	(300.00, 'Pago', '2025-04-05', 4, 7, 1),
+	(300.00, 'Atrasado', '2025-05-05', 4, 7, 1),
+	(170.00, 'Pago', '2025-04-08', 5, 9, 5),
+	(170.00, 'Pago', '2025-05-08', 5, 9, 5),
+	(170.00, 'Pendente', '2025-06-08', 5, 9, 5);
 
 SELECT SUM(saldo_final) FROM Caixa;  -- Soma do saldo final de todos os caixas
 SELECT AVG(saldo_final) FROM Caixa;  -- Média do saldo final de todos os caixas
 SELECT nome_cliente FROM Cliente ORDER BY nome_cliente ASC;  -- Apresenta todos os clientes em ordem crescente
+
+-- Utilizando AS e INNER JOIN (06/05)
+
+SELECT nome_cliente AS Nome FROM Cliente;  -- Aplicando um "apelido" à coluna nome_cliente
+SELECT cpf_cnpj AS CPF FROM Cliente WHERE LENGTH(cpf_cnpj) = 11;  -- Esses apelidos são úteis para especificar uma coluna por exemplo
+
+SELECT * FROM Caixa 
+	INNER JOIN Funcionario ON Funcionario.id_funcionario = Caixa.id_funcionario_fk;  -- Juntando os dados de diferentes tabelas com INNER JOIN
+																				     -- (A regra, é que a PK seja igual a FK)
+                                                                                     
+SELECT * FROM Recebimento
+	INNER JOIN TipoPag ON Recebimento.id_tipopag_fk = TipoPag.id_tipopag;  -- Juntando os dados das tabelas Recebimento e Tipo de Pagamento
+                                                                           -- INNER JOIN só pega dados que tem relacionamento, se for NULL, ele não pega
