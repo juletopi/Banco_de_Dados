@@ -26,9 +26,10 @@
 
 <div align="center">
  
-  • Este é um repositório com o conteúdo de Banco de Dados com foco em modelagem física e na \
-  criação e manipulação do banco de dados, ministrado pelo professor [**Elias de Abreu**](https://www.linkedin.com/in/elias-de-abreu-domingos-da-silva-843748262/), utilizando o **MySQL Workbench**, \
-  linguagem **SQL** além de ferramentas de prototipação como o **BrModelo** para o aprendizado.
+  • Este é um repositório com o conteúdo de Banco de Dados com foco em modelagem física e \
+  na criação e manipulação do banco de dados, ministrado pelo professor [**Elias de Abreu**](https://www.linkedin.com/in/elias-de-abreu-domingos-da-silva-843748262/), utilizando o \
+  **MySQL Workbench**, linguagem **SQL** além de ferramentas de prototipação \
+  como o **BrModelo** para o aprendizado.
  
 </div>
 
