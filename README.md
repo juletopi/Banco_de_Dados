@@ -68,11 +68,18 @@
 
 ## 🌟 Sobre Banco de Dados
 
-### ❓ Modelagem física
+### ❓ Modelagem física e banco de dados
 
-A **modelagem física de banco de dados** é a etapa onde o modelo lógico é transformado em um banco de dados real, definindo **tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, índices** e outras restrições. No MySQL e SQL, essa modelagem segue as regras do SGBD escolhido e influencia diretamente no desempenho do banco.
+A **modelagem física de banco de dados** é a etapa em que o modelo lógico é transformado em um banco de dados real, por meio da criação de **tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, índices** e outras restrições. No MySQL, essa implementação é feita utilizando a linguagem SQL e deve seguir as regras e limitações do SGBD escolhido. Essa fase é fundamental, pois influencia diretamente no desempenho, segurança e integridade dos dados.
 
-### 📋 Principais Conceitos
+Para fins de aprendizado, o **SGBD utilizado será o MySQL**, e os principais conceitos relacionados à modelagem e manipulação de dados estão listados abaixo.
+
+<br>
+
+## 📋 Listagem de conceitos
+
+### 🎲 Principais Conceitos de Banco de Dados
+
 
 - **🗄️ Tabela**: Estrutura que armazena os dados no banco. Cada tabela contém colunas (atributos) e linhas (registros).
   - **📊 Colunas (Atributos)**: Representam os diferentes tipos de dados armazenados, como texto, números, datas, etc.
@@ -94,7 +101,100 @@ A **modelagem física de banco de dados** é a etapa onde o modelo lógico é tr
   - `CHECK`: Define uma condição que os valores da coluna devem seguir.
   - `DEFAULT`: Define um valor padrão para a coluna caso não seja informado.
 
-### ❓ Criação do banco de dados
+---
+
+### 🏗️ Estrutura
+
+- **🧱 Criação de Estrutura (DDL)**: Envolve a definição da estrutura do banco de dados.
+  - `CREATE DATABASE`: Cria um novo banco de dados.
+  - `USE`: Seleciona qual banco será utilizado.
+  - `CREATE TABLE`: Cria uma nova tabela com colunas, tipos e restrições.
+  - `DROP TABLE`: Exclui uma tabela e seus dados de forma permanente.
+
+- **✍️ Manipulação de Dados (DML)**: Permite trabalhar com os dados dentro das tabelas.
+  - `INSERT INTO`: Insere registros na tabela.
+  - `SELECT`: Consulta dados armazenados.
+  - `UPDATE`: Altera valores de registros existentes.
+  - `DELETE`: Remove registros de uma tabela.
+  - `ALTER TABLE`: Modifica a estrutura de uma tabela (como tipo de coluna ou nome).
+
+---
+
+### 🔎 Filtros e Condições
+
+* **🔍 WHERE**: Define condições para filtrar registros nas consultas.
+
+  * `=`: Igualdade
+  * `<>`: Diferente
+  * `>`, `<`, `>=`, `<=`: Operadores de comparação
+  * `LIKE`: Filtro por padrão (ex: `'A%'` começa com A)
+  * `BETWEEN`: Define um intervalo de valores
+  * `IN`: Lista de valores permitidos
+  * `IS NULL` / `IS NOT NULL`: Verifica se um valor é nulo
+  * `AND`, `OR`, `NOT`: Combinações lógicas entre condições
+
+---
+
+### 📑 Ordenação e Agrupamento
+
+* **🧾 ORDER BY**: Organiza os resultados da consulta.
+
+  * `ASC`: Ordem crescente (padrão)
+  * `DESC`: Ordem decrescente
+
+* **📦 GROUP BY**: Agrupa registros com base em uma ou mais colunas.
+
+* **🎯 HAVING**: Aplica condições **após** o agrupamento (diferente de `WHERE`, que vem antes).
+
+---
+
+### 📊 Funções Analíticas e Estatísticas
+
+* **📐 Funções de Agregação**: Realizam cálculos sobre grupos de dados.
+
+  * `AVG()`: Média
+  * `SUM()`: Soma
+  * `MIN()`: Mínimo
+  * `MAX()`: Máximo
+  * `COUNT()`: Contagem de registros
+
+* **🔁 DISTINCT**: Elimina valores duplicados nos resultados da consulta.
+
+---
+
+### 🧠 Conceitos Avançados
+
+* **🔗 JOINs (Junções)**: Permitem combinar dados de duas ou mais tabelas.
+
+  * `INNER JOIN`: Retorna registros com correspondência em ambas as tabelas.
+  * `LEFT JOIN`: Retorna todos os registros da tabela da esquerda (mesmo sem correspondência).
+  * `RIGHT JOIN`: Retorna todos os registros da tabela da direita (mesmo sem correspondência).
+
+* **🏷️ Aliases (`AS`)**: Atribui apelidos temporários a colunas ou tabelas para facilitar a leitura.
+
+  * Exemplo: `SELECT nome AS 'Nome do Cliente' FROM Cliente;`
+
+* **🔁 Subconsultas (SELECT alinhado)**: Um `SELECT` dentro de outro, usado como filtro ou valor.
+
+  * Exemplo: `WHERE id IN (SELECT id FROM ...)`
+
+* **🔀 União de Consultas**:
+
+  * `UNION`: Junta os resultados de duas consultas e elimina duplicados.
+  * `UNION ALL`: Junta os resultados e **mantém** os duplicados.
+
+* **📥 Inserção com Seleção**:
+
+  * `INSERT INTO tabela_destino (...) SELECT ... FROM tabela_origem;`
+  * Usado para copiar dados de uma tabela para outra com base em um filtro.
+
+<div align="left">
+  <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
+</div>
+
+<br>
+
+## ❓ Criação do banco de dados
 
 A **criação do banco de dados** transforma o projeto lógico em um banco relacional usando **DDL (Data Definition Language)** no SQL (`CREATE`, `ALTER`, `DROP`). Implementa tabelas, colunas, tipos de dados, chaves, e restrições no SGBD (e.g., MySQL).
 
@@ -146,7 +246,13 @@ A **criação do banco de dados** transforma o projeto lógico em um banco relac
        );
        ```
 
-### ❓ Manipulação do banco de dados
+<div align="left">
+  <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
+</div>
+
+<br>
+
+## ❓ Manipulação do banco de dados
 
 A **manipulação do banco de dados** é realizada utilizando a **DML (Data Manipulation Language)** do SQL, que inclui comandos como `INSERT`, `UPDATE`, `DELETE`, e `SELECT`. Esses comandos permitem inserir, atualizar, remover e consultar dados nas tabelas criadas.
 
