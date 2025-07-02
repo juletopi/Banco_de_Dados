@@ -593,3 +593,20 @@ SELECT a.nome FROM Aluno AS a
 	INNER JOIN Contrato AS c ON a.id_aluno = c.fk_id_aluno
 	INNER JOIN Plano AS p ON c.fk_id_plano = p.id_plano
 		WHERE p.descricao = 'Plano Básico' AND c.dataFim >= '2025-06-03';
+
+-- Aula 07: Vamos trabalhar com UNION e INSERT com SELECT (17/06)
+
+-- Unindo SELECTs com o UNION
+SELECT nome, DataNasc, telefone FROM Aluno UNION ALL 
+	SELECT nome, DataNasc, telefone FROM Funcionario;   -- Requisitos para a união: mesmo num. de colunas, 
+											            -- mesmo tipo de dados (ex.: VARCHAR)
+
+SELECT nome_cliente, telefone FROM ecomerce.Clientes UNION ALL   -- O UNION também pode ser usado em múltiplos BDs
+	SELECT nome, telefone FROM Aluno;
+    
+-- Inserindo novos dados a partir da seleção usando INSERT com SELECT
+INSERT INTO Funcionario(nome, telefone, dataNasc, dataAdmissao)
+	SELECT nome, telefone, dataNasc, '2025-06-17' FROM Aluno
+		WHERE id_aluno > 5;
+        
+SELECT * FROM Funcionario;
