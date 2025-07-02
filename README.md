@@ -55,9 +55,9 @@
    </p>
     <a href="#-manipulação-do-banco-de-dados">Manipulação de banco de dados</a> &#xa0; | &#xa0;
     <a href="#1-criando-um-banco-de-dados">Conceitos Aprendidos 1</a> &#xa0; | &#xa0;
-    <a href="#2-inserindo-e-manipulando-dados">Conceitos Aprendidos 2</a> &#xa0; | &#xa0;
-    <a href="#3-consultas-mais-complexas-e-usando-join">Conceitos Aprendidos 3</a>
+    <a href="#2-inserindo-e-manipulando-dados">Conceitos Aprendidos 2</a>
   </p>
+    <a href="#3-consultas-mais-complexas-e-usando-join">Conceitos Aprendidos 3</a> &#xa0; | &#xa0;
     <a href="#4-treinando-consultas-com-join">Conceitos Aprendidos 4</a> &#xa0; | &#xa0;
     <a href="#5-união-de-consultas-e-inserção-com-seleção">Conceitos Aprendidos 5</a> &#xa0; | &#xa0;
     <a href="#-autor">Autor</a>
