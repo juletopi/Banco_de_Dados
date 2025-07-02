@@ -1547,6 +1547,38 @@ SELECT a.nome FROM Aluno AS a
   <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
 </div>
 
+### 5. União de Consultas e Inserção com Seleção
+> [!NOTE]\
+> *Retirado da aula de "[academia.sql](https://github.com/juletopi/Banco_de_Dados/blob/main/academia.sql)"*
+
+- Conceitos aprendidos:
+  - Utilização do UNION e UNION ALL para unir resultados de diferentes consultas SELECT.
+  - Utilização do INSERT INTO ... SELECT para inserir dados de uma tabela em outra a partir de uma seleção.
+  - Possibilidade de unir dados entre diferentes bancos de dados.
+
+```sql
+-- Aula 07: Vamos trabalhar com UNION e INSERT com SELECT (17/06)
+
+-- Unindo SELECTs com o UNION
+SELECT nome, DataNasc, telefone FROM Aluno UNION ALL 
+	SELECT nome, DataNasc, telefone FROM Funcionario;   -- Requisitos para a união: mesmo num. de colunas, 
+											            -- mesmo tipo de dados (ex.: VARCHAR)
+
+SELECT nome_cliente, telefone FROM ecomerce.Clientes UNION ALL   -- O UNION também pode ser usado em múltiplos BDs
+	SELECT nome, telefone FROM Aluno;
+    
+-- Inserindo novos dados a partir da seleção usando INSERT com SELECT
+INSERT INTO Funcionario(nome, telefone, dataNasc, dataAdmissao)
+	SELECT nome, telefone, dataNasc, '2025-06-17' FROM Aluno
+		WHERE id_aluno > 5;
+        
+SELECT * FROM Funcionario;
+```
+
+<div align="left">
+  <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
+</div>
+
 <br>
 
 <!-- AUTHOR -->
