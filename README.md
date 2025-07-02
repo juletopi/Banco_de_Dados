@@ -41,6 +41,34 @@
     <img src="https://img.shields.io/badge/Made%20with%20language:-SQL%20-gray.svg?colorA=4f5d99&amp;colorB=3d4a75&amp;style=for-the-badge" alt="SQLLanguage-badge" style="max-width: 100%;">
   </a>
 </div>
+
+<!-- SUMMARY -->
+
+<h2 align="center">Sumário 🧾</h2>
+
+<div align="center">
+  <p align="center">
+    <a href="#-professor">Professor</a> &#xa0; | &#xa0;
+    <a href="#-sobre-banco-de-dados">Sobre o tópico</a> &#xa0; | &#xa0;
+    <a href="#-sobre-banco-de-dados">Listagem de conceitos</a> &#xa0; | &#xa0;
+    <a href="#-criação-do-banco-de-dados">Criação de banco de dados</a>
+   </p>
+    <a href="#-manipulação-do-banco-de-dados">Manipulação de banco de dados</a> &#xa0; | &#xa0;
+    <a href="#1-criando-um-banco-de-dados">Conceitos Aprendidos 1</a> &#xa0; | &#xa0;
+    <a href="#2-inserindo-e-manipulando-dados">Conceitos Aprendidos 2</a> &#xa0; | &#xa0;
+    <a href="#3-consultas-mais-complexas-e-usando-join">Conceitos Aprendidos 3</a>
+  </p>
+    <a href="#4-treinando-consultas-com-join">Conceitos Aprendidos 4</a> &#xa0; | &#xa0;
+    <a href="#5-união-de-consultas-e-inserção-com-seleção">Conceitos Aprendidos 5</a> &#xa0; | &#xa0;
+    <a href="#-autor">Autor</a>
+</div>
+
+<br>
+
+<div align="center">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=8354d2&height=4&section=header&%20render">
+</div>
+
 <br>
 
 <!-- ABOUT TEACHER -->
@@ -59,10 +87,6 @@
 </div>
 
 <br>
-
-<div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=4f5d99&height=4&section=header&%20render">
-</div>
 
 <!-- ABOUT TOPIC -->
 
