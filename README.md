@@ -1571,6 +1571,10 @@ SELECT a.nome FROM Aluno AS a
   <h6><a href="#banco-de-dados-%EF%B8%8F"> Voltar para o início ↺</a></h6>
 </div>
 
+<div align="center">
+  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=4f5d99&height=4&section=header&%20render">
+</div>
+
 ### 5. União de Consultas e Inserção com Seleção
 > [!NOTE]\
 > *Retirado da aula de "[academia.sql](https://github.com/juletopi/Banco_de_Dados/blob/main/academia.sql)"*
