@@ -59,7 +59,9 @@
   </p>
     <a href="#3-consultas-mais-complexas-e-usando-join">Conceitos Aprendidos 3</a> &#xa0; | &#xa0;
     <a href="#4-treinando-consultas-com-join">Conceitos Aprendidos 4</a> &#xa0; | &#xa0;
-    <a href="#5-união-de-consultas-e-inserção-com-seleção">Conceitos Aprendidos 5</a> &#xa0; | &#xa0;
+    <a href="#5-união-de-consultas-e-inserção-com-seleção">Conceitos Aprendidos 5</a>
+  </p>
+    <a href="#6-trabalho-final-diagrama-der-modelagem-física-e-consultas-avançadas">Trabalho final</a> &#xa0; | &#xa0;
     <a href="#-autor">Autor</a>
 </div>
 
