@@ -1728,7 +1728,7 @@ INSERT INTO Usuario (nome_usu, email, telefone, cpf_cnpj, senha) VALUES
 
 SELECT * FROM Usuario;
 
--- Lotes
+-- Imagens
 INSERT INTO Imagens (data_captura, caminho_arq, origem) VALUES
 ('2024-01-10', '/imagens/0odhu4.png', 'SENTINEL-2'),
 ('2024-02-15', '/imagens/0dn333.png', 'LANDSAT-9'),
@@ -1746,7 +1746,7 @@ INSERT INTO Imagens (data_captura, caminho_arq, origem) VALUES
 
 SELECT * FROM Imagens;
 
--- Lotes
+-- Lote
 INSERT INTO Lote (nome_lote, delimitacao_area, tamanho_km2, latitude, longitude, fk_id_usuario) VALUES
 ('Lote A', 'Polígono A', NULL, -11.440001, -61.440001, 1),
 ('Lote B', 'Polígono B', 560.50, -11.441002, -61.442002, 2),
