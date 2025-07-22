@@ -18,10 +18,10 @@
 <!-- PRESENTATION -->
 
 <div align="center">
-    <a href="">
-        <img src="https://github.com/user-attachments/assets/2268dfea-de44-41f3-baae-b77e1781c5d0" alt="SQL-pic" width="140px" title="Repositório de Banco de Dados">
-    </a>
-    <h2 align="center">Banco de Dados 🗄️</h2>
+  <a href="">
+    <img src="https://github.com/user-attachments/assets/2268dfea-de44-41f3-baae-b77e1781c5d0" alt="SQL-pic" width="140px" title="Repositório de Banco de Dados">
+  </a>
+  <h2 align="center">Banco de Dados 🗄️</h2>
 </div>
 
 <div align="center">
@@ -1610,7 +1610,9 @@ SELECT * FROM Funcionario;
 </div>
 
 <div align="center">
-  <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=4f5d99&height=4&section=header&%20render">
+  <a href="https://github.com/juletopi/Banco_de_Dados/blob/main/controleGeo_DER.png">
+    <img width=100% align="center" src="https://capsule-render.vercel.app/api?type=rect&color=4f5d99&height=4&section=header&%20render">
+  </a>
 </div>
 
 ### 6. Trabalho final: Diagrama D.E.R, Modelagem Física e Consultas Avançadas
